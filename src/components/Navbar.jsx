@@ -1,4 +1,9 @@
+import { useRef } from "react";
 export const Navbar = (props) => {
+  const menuRef = useRef();
+  const toggleMenu = (props) => {
+    menuRef.current.classList.toggle("hidden");
+  }
   return (
     <div className={props.className + " flex flex-col md:items-end navbar"}>
       <nav className="text-right">
@@ -8,7 +13,7 @@ export const Navbar = (props) => {
               Food Loki
             </a>
           </h1>
-          <div className="px-4 cursor-pointer h-6 md:hidden">
+          <div onClick={toggleMenu} className="px-4 cursor-pointer h-6 md:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -26,7 +31,7 @@ export const Navbar = (props) => {
           </div>
         </div>
 
-        <ul className="text-sm mt-6">
+        <ul ref={menuRef} className="text-sm mt-6 hidden md:block">
           <li className="text-gray-700 font-bold">
             <a className="border-primary" href="">
               <span>Home</span>

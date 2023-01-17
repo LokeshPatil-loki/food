@@ -9,13 +9,13 @@ export default function App() {
       <main className="px-16 py-6 bg-gray-100 md:col-span-2">
         <div className="flex justify-center md:justify-end">
           <a
-            className="text-primary btn border-primary md:border-2 hover:bg-red-500 hover:text-white"
+            className="text-primary btn border-primary md:border-2 hover:bg-red-500 hover:text-white transition ease-in-out duration-500"
             href="#"
           >
             Log in
           </a>
           <a
-            className="text-primary btn border-primary md:border-2 ml-2  hover:bg-red-500 hover:text-white"
+            className="text-primary btn border-primary md:border-2 ml-2  hover:bg-red-500 hover:text-white transition ease-in-out duration-500"
             href="#"
           >
             Sign up
@@ -30,7 +30,7 @@ export default function App() {
         <LatestRecipes />
         <MostPopular />
         <div className="flex justify-center">
-          <div className="btn bg-secondary-100 text-secondary-200 hover:shadow-inner">Load More</div>
+          <div className="btn bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-in-out ">Load More</div>
         </div>
       </main>
     </div>
