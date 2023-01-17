@@ -30,7 +30,7 @@ export default function App() {
         <LatestRecipes />
         <MostPopular />
         <div className="flex justify-center">
-          <div className="btn bg-secondary-100 text-secondary-200">Load More</div>
+          <div className="btn bg-secondary-100 text-secondary-200 hover:shadow-inner">Load More</div>
         </div>
       </main>
     </div>
